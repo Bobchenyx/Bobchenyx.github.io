@@ -3,6 +3,7 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
+published: false
 redirect_from:
   - /resume
 ---
@@ -11,54 +12,46 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* M.S. in Electrical and Computer Engineering, Northeastern University, Boston, MA, 2023
+* B.E. in Electrical Engineering, Beijing University of Technology, Beijing, China, 2021
 
-Work experience
+Work Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* May 2024 - Present: Machine Learning Engineer
+  * AIbao LLC & EmbodyX
+  * Prune and quantize DeepSeek V3 model with MoE Pruning algorithm and Llamacpp. Deploy MoE LLM on AMD Windows platform with Vulkan and HIP/ROCm backend.
+  * Develop real-time chatting system integrating LLMs and TTS, enabling seamless human-computer interaction.
+  * Deploy Digital Avatar Projects with CoreML and TensorRT, accelerate inference for real-time performance.
+  * Develop trajectory prediction assistant with transformer-based models for license learning exams.
+  * Video data filtering with face centering and scene detection, audio filtering with multi expert mean score.
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* January 2023 - August 2023: Computer Vision Engineering Co-op
+  * Cognex Corporation, Natick, MA
+  * Developed a .NET wrapper layer to port an Edge Learning Tool between two versions of VisionPro software.
+  * Feature enhancement and bug fixes for VisionPro APIs in C++ and QuickBuild Edit Control UI in C#.
+  * Utilized Doxygen and SandCastle in .NET programs to generate HTML documentation and CHM files.
+  * Expanded testing coverage in C++ and C# as part of the CI Infrastructure.
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
+Technical Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Programming Languages: Python, C/C++, C#/.NET Core, SQL
+* Tools & Frameworks: Linux Server, PyTorch, Git, llamacpp, KTransformers, TensorRT, CoreML
+* Models: DeepSeek V2/V3, Qwen 2/2.5, LLaMA 2, ViT, ViM
 
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
+
+<!-- Talks
 ======
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
+  {% endfor %}</ul> -->
+
+<!-- Teaching
 ======
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+  {% endfor %}</ul> -->
