@@ -28,9 +28,9 @@
 
     {% if post.collection == 'publications' %}
       {% if post.status == 'submitted' %}
-        <p style="margin-bottom: 0.2em;">[<strong>{{ post.venue }}</strong>] {{ title }}</p>
+        <p style="margin-bottom: 0.2em;">[<strong>{{ post.venue }}</strong>] {{ title }}{% if post.paperurl %} <a href="{{ post.paperurl }}">[Paper]</a>{% endif %}</p>
       {% else %}
-        <p style="margin-bottom: 0.2em;">[<strong>{{ post.venue }} {{ post.date | default: "1900-01-01" | date: "%Y" }}</strong>] {{ title }}</p>
+        <p style="margin-bottom: 0.2em;">[<strong>{{ post.venue }} {{ post.date | default: "1900-01-01" | date: "%Y" }}</strong>] {{ title }}{% if post.paperurl %} <a href="{{ post.paperurl }}">[Paper]</a>{% endif %}</p>
       {% endif %}
       {% if post.authors %}
         <p style="margin-top: 0;">{{ post.authors }}</p>
