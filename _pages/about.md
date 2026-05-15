@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: ""
+title: "Yixiao Chen"
 author_profile: true
 redirect_from:
   - /about/
@@ -60,7 +60,7 @@ I received my M.S. in Electrical and Computer Engineering from Northeastern Univ
         &nbsp;|&nbsp;<a class="pub-text-link" href="{{ post.projecturl }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> Project</a>
       {% endif %}
       {% if post.coderepo and post.coderepo != '' %}
-        &nbsp;|&nbsp;<a href="{{ post.codeurl }}" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/{{ post.coderepo }}?style=social&label=Code%20Stars&logoColor=2c4a88" alt="Code Stars" class="stars-badge"></a>
+        &nbsp;|&nbsp;<a href="https://github.com/{{ post.coderepo }}" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/{{ post.coderepo }}?style=social&label=Code%20Stars&logoColor=2c4a88" alt="Code Stars" class="stars-badge"></a>
       {% endif %}
     </p>
   </div>
