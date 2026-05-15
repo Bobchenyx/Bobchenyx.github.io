@@ -100,6 +100,10 @@ h2.no-underline {
   border-bottom: none;
   padding-bottom: 0;
 }
+/* drop the 2em top margin the theme puts on every heading, for the first one */
+.page__content > h2:first-child {
+  margin-top: 0;
+}
 html {
   scroll-behavior: smooth;
 }
