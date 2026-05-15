@@ -47,11 +47,7 @@ I received my M.S. in Electrical and Computer Engineering from Northeastern Univ
     <p class="paper-desc">{{ post.description }}</p>
     {% endif %}
     <p class="paper-links">
-      {% if post.paperurl and post.paperurl != '' %}
-        <a class="pub-venue" href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer">{{ post.venue }}</a>
-      {% else %}
-        <span class="pub-venue">{{ post.venue }}</span>
-      {% endif %}
+      <span class="pub-venue">{{ post.venue }}</span>
       {% if post.paperurl and post.paperurl != '' %}
         &nbsp;|&nbsp;<a class="pub-text-link" href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a>
       {% endif %}
@@ -192,7 +188,15 @@ h2[id] {
 }
 .paper-box .paper-links .pub-text-link:hover { text-decoration: underline; }
 .paper-box .paper-links .stars-badge { height: 18px; vertical-align: -20%; }
-.pub-venue { font-weight: 600; color: var(--global-link-color); }
+.pub-venue {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--global-link-color);
+  padding: 0.1rem 0.5rem;
+  background: var(--global-footer-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 4px;
+}
 .paper-links a {
   font-size: 0.8rem;
   padding: 0.1rem 0.5rem;
