@@ -213,8 +213,10 @@ h2[id] {
   .paper-box { flex-direction: column; }
   .paper-box-image {
     flex: unset;
-    max-width: 100%;
-    aspect-ratio: 3 / 2;
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
   }
 }
 ul.timeline {
