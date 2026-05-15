@@ -1,6 +1,5 @@
 ---
 permalink: /
-title: "Yixiao Chen"
 author_profile: true
 redirect_from:
   - /about/
