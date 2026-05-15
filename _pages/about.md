@@ -94,10 +94,12 @@ I received my M.S. in Electrical and Computer Engineering from Northeastern Univ
 </ul>
 
 <style>
-/* widen the main container on large screens, add more left breathing room */
-#main { padding-left: 5em; }
+/* widen the main container + breathing room — desktop only */
+@media (min-width: 64em) {
+  #main { padding-left: 4em; }
+}
 @media (min-width: 80em) {
-  #main { max-width: 1380px; padding-left: 4em; }
+  #main { max-width: 1380px; }
 }
 h2.no-underline {
   border-bottom: none;
@@ -209,7 +211,11 @@ h2[id] {
 }
 @media (max-width: 600px) {
   .paper-box { flex-direction: column; }
-  .paper-box-image { flex: unset; max-width: 100%; }
+  .paper-box-image {
+    flex: unset;
+    max-width: 100%;
+    aspect-ratio: 3 / 2;
+  }
 }
 ul.timeline {
   list-style: none;
