@@ -8,11 +8,13 @@ redirect_from:
 
 <h2 id="about">About</h2>
 
-I am a Machine Learning Engineer at EmbodyX Inc. & AIbao LLC. I started with real-time AI systems, building TTS-integrated chatting avatars and streaming pipelines. From there, I moved into MoE large model compression — pruning, quantization, and edge deployment. Recently, I have been exploring MoE efficient decoding and picking up vibe coding along the way. I am also a passionate open-source enthusiast and enjoy contributing to the community whenever I can.
+I am a Machine Learning Engineer at EmbodyX, working on efficient AI systems, large model deployment, and embodied AI.
 
-Previously, I worked as a Software Engineering Co-op at Cognex Corporation, where I developed .NET wrapper layers and contributed to VisionPro software.
+Recently, my work has focused on embodied AI systems, including model deployment on Unitree G1 and UR-series robotic arms. I also have experience with Mixture-of-Experts large language models, including pruning, quantization, efficient decoding, and edge deployment.
 
-I received my M.S. in Electrical and Computer Engineering from Northeastern University and my B.E. in Electrical Engineering from Beijing University of Technology.
+Previously, I worked on real-time AI applications such as TTS-integrated chatting avatars and streaming pipelines. Before that, I was a Software Engineering Co-op at Cognex Corporation, where I contributed to VisionPro software.
+
+I received my M.S. from Northeastern University and my B.E. from Beijing University of Technology.
 
 <h2 id="research-interests" class="no-underline">Research Interests</h2>
 
