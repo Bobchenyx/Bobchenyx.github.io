@@ -10,10 +10,12 @@ Personal academic website for Yixiao Chen (Bobchenyx.github.io), built on the Ac
 
 ### Local Setup (Ruby)
 ```bash
-brew install ruby node
+brew install ruby@3.3 node
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
 gem install bundler
 bundle install
 ```
+Use Ruby 3.3. The `github-pages` gem pins Jekyll 3.10, which fails on Ruby 3.4+/4.x (`csv` is no longer a default gem), and macOS system Ruby 2.6 is too old. If Bundler resolves an old `github-pages` with Liquid 4.0.3 (`undefined method 'tainted?'`), run `bundle update`; `Gemfile.lock` is gitignored.
 
 ### Serve Locally
 ```bash
@@ -31,6 +33,11 @@ docker compose up              # serves on localhost:4000
 npm run build:js               # minifies JS via uglifyjs → assets/js/main.min.js
 ```
 
+### CV JSON
+```bash
+./scripts/update_cv_json.sh    # regenerates _data/cv.json from _pages/cv.md
+```
+
 ### Markdown Generators (Python)
 ```bash
 python markdown_generator/publications.py   # TSV → _publications/ markdown files
@@ -40,7 +47,17 @@ python markdown_generator/talks.py          # TSV → _talks/ markdown files
 ## Architecture
 
 ### Site Structure
-Active navigation (defined in `_data/navigation.yml`): Publications, Experience, CV (PDF link). Talks, Teaching, Portfolio, and Blog are available but currently disabled.
+The site is a **single-page homepage**: `_pages/about.md` (permalink `/`) holds the About, Research Interests, Selected Publications, Education, and Experience sections, plus its own page-scoped `<style>` block. That inline CSS includes the `.paper-box`, `.interest-tags`, `.timeline`, and `.pub-venue` styles and widens `#main` on desktop. Edit homepage styling there, not in `_sass/`.
+
+Navigation (`_data/navigation.yml`) links to anchors on that page (`/#publications`, `/#education`, `/#experience`) and to the CV PDF at `files/YCHEN-CV.pdf`. Every `<h2 id=...>` on the homepage is an anchor target, so renaming an id breaks a nav link. Talks, Teaching, Portfolio, and Blog nav entries are commented out.
+
+### Publications
+The homepage loops over `site.publications`, newest `date` first, and renders every published entry as a paper box. Files that are leftover template samples (`paper-title-number-*`) set `published: false` so they stay hidden. Custom front-matter fields the homepage reads:
+- `authors`: an HTML string; wrap the site owner in `<u>…</u>` to highlight them
+- `venue`: shown as a gray badge
+- `teaser`: an image filename under `images/` (falls back to `images/paper-placeholder.svg`)
+- `description`, `paperurl`, `projecturl`
+- `coderepo`: in `owner/repo` form; renders a GitHub stars badge
 
 ### Content Model
 Jekyll collections defined in `_config.yml`: `_publications/`, `_talks/`, `_teaching/`, `_portfolio/`, `_posts/`, `_pages/`. Each markdown file uses YAML front matter for metadata (dates, venues, URLs, categories). Publication files follow the naming convention `YYYY-MM-DD-slug.md`.
@@ -75,3 +92,6 @@ All site-wide settings are in `_config.yml`: site metadata, author info (name, b
 Author profile sidebar is configured in `_config.yml` under `author:` — avatar, name, bio, location, employer, and social/academic links.
 
 Customization hooks: `_includes/head/custom.html` and `_includes/footer/custom.html` for injecting custom HTML without modifying core templates.
+
+### CI
+`.github/workflows/scrape_talks.yml` runs `talkmap.ipynb` whenever `_talks/` changes. It pushes "Automated update of talk locations" commits, so pull before pushing.

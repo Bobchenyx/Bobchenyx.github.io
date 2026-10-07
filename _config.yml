@@ -25,9 +25,10 @@ author:
   avatar           : "profile.jpg"
   name             : "Yixiao Chen"
   pronouns         : # example: "she/her"
-  bio              : "Machine Learning Engineer"
+  bio              : "Perception Engineer"
   location         : "Boston, MA"
-  employer         : "EmbodyX"
+  employer         : "Motional"
+  employer_url     : "https://motional.com"
   uri              : # URL
   # email            : "chen.yixia@northeastern.edu"
 

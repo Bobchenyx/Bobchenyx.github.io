@@ -1,14 +1,14 @@
 # The following is the order of the links in the header of the website.
 
 main:
-  - title: "Publications"
-    url: /#publications
+  - title: "Experience"
+    url: /#experience
 
   - title: "Education"
     url: /#education
 
-  - title: "Experience"
-    url: /#experience
+  - title: "Publications"
+    url: /#publications
 
   - title: "CV"
     url: /files/YCHEN-CV.pdf

@@ -8,13 +8,63 @@ redirect_from:
 
 <h2 id="about">About</h2>
 
-I am a Machine Learning Engineer at EmbodyX, working on efficient AI systems, large model deployment, and embodied AI.
+I am an Engineer at Motional, contributing to the mission to make driverless vehicles a safe, reliable, and accessible reality.
 
-Recently, my work has focused on embodied AI systems, including model deployment on Unitree G1 and UR-series robotic arms. I also have experience with Mixture-of-Experts large language models, including pruning, quantization, efficient decoding, and edge deployment.
-
-Previously, I worked on real-time AI applications such as TTS-integrated chatting avatars and streaming pipelines. Before that, I was a Software Engineering Co-op at Cognex Corporation, where I contributed to VisionPro software.
+Previously, I worked on efficient AI and large model deployment at EmbodyX and Northeastern University. Before that, I was a Software Engineering Co-op at Cognex Corporation, where I contributed to VisionPro software.
 
 I received my M.S. from Northeastern University and my B.E. from Beijing University of Technology.
+
+<h2 id="experience">Experience</h2>
+
+<ul class="timeline with-logos">
+  <li>
+    <img class="timeline-logo" src="{{ '/images/logos/motional.svg' | relative_url }}" alt="Motional logo">
+    <div>
+      <strong>Engineer</strong>, Motional
+      <span class="timeline-meta">07/2026 – Present</span>
+    </div>
+  </li>
+  <li>
+    <img class="timeline-logo" src="{{ '/images/logos/northeastern.png' | relative_url }}" alt="Northeastern University logo">
+    <div>
+      <strong>Research Assistant</strong>, Northeastern University
+      <span class="timeline-meta">05/2024 – 06/2026 · Boston, MA</span>
+    </div>
+  </li>
+  <li>
+    <img class="timeline-logo" src="{{ '/images/logos/embodyx.jpeg' | relative_url }}" alt="EmbodyX logo">
+    <div>
+      <strong>Machine Learning Engineer</strong>, EmbodyX Inc. &amp; AIbao LLC
+      <span class="timeline-meta">05/2024 – 06/2026 · Boston, MA</span>
+    </div>
+  </li>
+  <li>
+    <img class="timeline-logo" src="{{ '/images/logos/cognex.png' | relative_url }}" alt="Cognex logo">
+    <div>
+      <strong>Software Engineering Co-op</strong>, Cognex Corporation
+      <span class="timeline-meta">01/2023 – 08/2023 · Natick, MA</span>
+    </div>
+  </li>
+</ul>
+
+<h2 id="education">Education</h2>
+
+<ul class="timeline with-logos">
+  <li>
+    <img class="timeline-logo" src="{{ '/images/logos/northeastern.png' | relative_url }}" alt="Northeastern University logo">
+    <div>
+      <strong>M.S. in Electrical and Computer Engineering</strong>, Northeastern University
+      <span class="timeline-meta">09/2021 – 12/2023 · Boston, MA</span>
+    </div>
+  </li>
+  <li>
+    <img class="timeline-logo" src="{{ '/images/logos/bjut.png' | relative_url }}" alt="Beijing University of Technology logo">
+    <div>
+      <strong>B.E. in Electrical Engineering</strong>, Beijing University of Technology
+      <span class="timeline-meta">09/2017 – 05/2021 · Beijing, China</span>
+    </div>
+  </li>
+</ul>
 
 <h2 id="research-interests" class="no-underline">Research Interests</h2>
 
@@ -63,32 +113,6 @@ I received my M.S. from Northeastern University and my B.E. from Beijing Univers
   </div>
 </div>
 {% endfor %}
-
-<h2 id="education">Education</h2>
-
-<ul class="timeline">
-  <li>
-    <strong>M.S. in Electrical and Computer Engineering</strong>, Northeastern University
-    <span class="timeline-meta">09/2021 – 12/2023 · Boston, MA</span>
-  </li>
-  <li>
-    <strong>B.E. in Electrical Engineering</strong>, Beijing University of Technology
-    <span class="timeline-meta">09/2017 – 05/2021 · Beijing, China</span>
-  </li>
-</ul>
-
-<h2 id="experience">Experience</h2>
-
-<ul class="timeline">
-  <li>
-    <strong>Machine Learning Engineer</strong>, EmbodyX Inc. &amp; AIbao LLC
-    <span class="timeline-meta">05/2024 – Present</span>
-  </li>
-  <li>
-    <strong>Software Engineering Co-op</strong>, Cognex Corporation
-    <span class="timeline-meta">01/2023 – 08/2023 · Natick, MA</span>
-  </li>
-</ul>
 
 <style>
 /* widen the main container + breathing room — desktop only */
@@ -243,5 +267,19 @@ ul.timeline li {
   color: var(--global-text-color-light);
   font-size: 0.88rem;
   margin-top: 0.15rem;
+}
+ul.timeline.with-logos li {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.timeline-logo {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border: 1px solid var(--global-border-color);
+  border-radius: 8px;
+  background: #fff;
 }
 </style>
