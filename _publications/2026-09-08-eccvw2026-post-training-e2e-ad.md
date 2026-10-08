@@ -8,5 +8,6 @@ venue: 'ECCV 2026 Workshop'
 description: '🏆 Best Paper Award'
 authors: 'Ruining Yang, Muxing Wang, <u>Yixiao Chen</u>, Tongfei Guo, Yi Xu, Can Cui, Zichong Yang, Yitian Zhang, Ziran Wang, Yun Fu, Lili Su'
 paperurl: 'https://arxiv.org/abs/2607.08072'
+teaser: 'papers/post-training-e2e-ad.png'
 coderepo: 'RYNing/Awesome-Post-Training-In-Autonomous-Driving-Papers'
 ---

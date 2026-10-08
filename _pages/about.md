@@ -20,12 +20,12 @@ I received my M.S. from Northeastern University and my B.E. from Beijing Univers
   <li>
     <img class="timeline-logo" src="{{ '/images/logos/motional.svg' | relative_url }}" alt="Motional logo">
     <div>
-      <strong>Engineer</strong>, Motional
+      <strong>Perception Engineer</strong>, Motional
       <span class="timeline-meta">07/2026 – Present</span>
     </div>
   </li>
   <li>
-    <img class="timeline-logo" src="{{ '/images/logos/northeastern.png' | relative_url }}" alt="Northeastern University logo">
+    <img class="timeline-logo" src="{{ '/images/logos/northeastern.jpeg' | relative_url }}" alt="Northeastern University logo">
     <div>
       <strong>Research Assistant</strong>, Northeastern University
       <span class="timeline-meta">05/2024 – 06/2026 · Boston, MA</span>
@@ -51,7 +51,7 @@ I received my M.S. from Northeastern University and my B.E. from Beijing Univers
 
 <ul class="timeline with-logos">
   <li>
-    <img class="timeline-logo" src="{{ '/images/logos/northeastern.png' | relative_url }}" alt="Northeastern University logo">
+    <img class="timeline-logo" src="{{ '/images/logos/northeastern.jpeg' | relative_url }}" alt="Northeastern University logo">
     <div>
       <strong>M.S. in Electrical and Computer Engineering</strong>, Northeastern University
       <span class="timeline-meta">09/2021 – 12/2023 · Boston, MA</span>
