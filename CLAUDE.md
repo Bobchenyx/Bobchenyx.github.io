@@ -47,17 +47,24 @@ python markdown_generator/talks.py          # TSV → _talks/ markdown files
 ## Architecture
 
 ### Site Structure
-The site is a **single-page homepage**: `_pages/about.md` (permalink `/`) holds the About, Research Interests, Selected Publications, Education, and Experience sections, plus its own page-scoped `<style>` block. That inline CSS includes the `.paper-box`, `.interest-tags`, `.timeline`, and `.pub-venue` styles and widens `#main` on desktop. Edit homepage styling there, not in `_sass/`.
+Three pages share components from `_includes/`:
+- `_pages/about.md` (`/`): About, Experience (summary), Education, Selected Publications
+- `_pages/experience.md` (`/experience/`): Experience with details (collaborators, work)
+- `_pages/publications.md` (`/publications/`): every publication
 
-Navigation (`_data/navigation.yml`) links to anchors on that page (`/#publications`, `/#education`, `/#experience`) and to the CV PDF at `files/YCHEN-CV.pdf`. Every `<h2 id=...>` on the homepage is an anchor target, so renaming an id breaks a nav link. Talks, Teaching, Portfolio, and Blog nav entries are commented out.
+Shared includes: `paper-box.html` (one paper card, called with `pub=`), `experience.html` (the timeline; `details=true` shows the `.timeline-desc` lines, otherwise the heading links to `/experience/`), and `page-styles.html` (all page CSS: `.paper-box`, `.timeline`, `.inline-logo`, `.pub-venue`, wider `#main` on desktop). Each page ends with `{% include page-styles.html %}`. Edit page styling there, not in `_sass/`.
+
+Navigation (`_data/navigation.yml`): Home, Experience, Publications, and the CV PDF at `files/YCHEN-CV.pdf`. Talks, Teaching, Portfolio, and Blog nav entries are commented out. This site's layout mirrors the sibling repo `../RYNing.github.io` (a shared couple's site design); check it when changing shared structure.
 
 ### Publications
-The homepage loops over `site.publications`, newest `date` first, and renders every published entry as a paper box. Files that are leftover template samples (`paper-title-number-*`) set `published: false` so they stay hidden. Custom front-matter fields the homepage reads:
-- `authors`: an HTML string; wrap the site owner in `<u>…</u>` to highlight them
-- `venue`: shown as a gray badge
-- `teaser`: an image filename under `images/` (falls back to `images/paper-placeholder.svg`)
+Both pages loop over `site.publications`, newest `date` first. The homepage skips entries with `selected: false`; `/publications/` shows all. Leftover template samples (`paper-title-number-*`) set `published: false` so they stay hidden. Front-matter fields the paper card reads:
+- `authors`: an HTML string; wrap the site owner in `<u>…</u>`; mark `<sup>*</sup>` equal contribution and `<sup>†</sup>` corresponding author
+- `venue`: shown as a gray badge; `award`: red line under the authors
+- `teaser`: an image path under `images/` (thumbnails live in `images/papers/`; falls back to `images/paper-placeholder.svg`)
 - `description`, `paperurl`, `projecturl`
 - `coderepo`: in `owner/repo` form; renders a GitHub stars badge
+
+The CV PDF (`files/YCHEN-CV.pdf`) is generated outside the repo; keep its publication list in sync when papers change.
 
 ### Content Model
 Jekyll collections defined in `_config.yml`: `_publications/`, `_talks/`, `_teaching/`, `_portfolio/`, `_posts/`, `_pages/`. Each markdown file uses YAML front matter for metadata (dates, venues, URLs, categories). Publication files follow the naming convention `YYYY-MM-DD-slug.md`.

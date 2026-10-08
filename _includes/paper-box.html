@@ -1,0 +1,34 @@
+{% assign post = include.pub %}
+<div class="paper-box">
+  <div class="paper-box-image">
+    {% if post.teaser and post.teaser != '' %}
+    <img src="{{ '/images/' | append: post.teaser | relative_url }}" alt="paper teaser">
+    {% else %}
+    <img src="{{ '/images/paper-placeholder.svg' | relative_url }}" alt="paper teaser">
+    {% endif %}
+  </div>
+  <div class="paper-box-text">
+    <p class="paper-title">{{ post.title }}</p>
+    {% if post.authors and post.authors != '' %}
+    <p class="paper-authors">{{ post.authors }}</p>
+    {% endif %}
+    {% if post.award and post.award != '' %}
+    <p class="paper-award">{{ post.award }}</p>
+    {% endif %}
+    {% if post.description and post.description != '' %}
+    <p class="paper-desc">{{ post.description }}</p>
+    {% endif %}
+    <p class="paper-links">
+      <span class="pub-venue">{{ post.venue }}</span>
+      {% if post.paperurl and post.paperurl != '' %}
+        &nbsp;|&nbsp;<a class="pub-text-link" href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a>
+      {% endif %}
+      {% if post.projecturl and post.projecturl != '' %}
+        &nbsp;|&nbsp;<a class="pub-text-link" href="{{ post.projecturl }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> Project</a>
+      {% endif %}
+      {% if post.coderepo and post.coderepo != '' %}
+        &nbsp;|&nbsp;<a href="https://github.com/{{ post.coderepo }}" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/{{ post.coderepo }}?style=social&label=Code%20Stars&logoColor=2c4a88" alt="Code Stars" class="stars-badge"></a>
+      {% endif %}
+    </p>
+  </div>
+</div>

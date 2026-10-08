@@ -1,0 +1,48 @@
+<h2 id="experience">Experience{% unless include.details %}
+  <span class="pub-heading-meta">
+    | <a href="{{ '/experience/' | relative_url }}">More Details &gt;</a>
+  </span>{% endunless %}
+</h2>
+
+<ul class="timeline with-logos">
+  <li>
+    <img class="timeline-logo" src="{{ '/images/logos/motional.jpeg' | relative_url }}" alt="Motional logo">
+    <div>
+      <strong>Perception Engineer</strong>, Motional
+      <span class="timeline-meta">07/2026 – Present</span>
+    </div>
+  </li>
+  <li>
+    <img class="timeline-logo" src="{{ '/images/logos/northeastern.jpeg' | relative_url }}" alt="Northeastern University logo">
+    <div>
+      <strong>Research Assistant</strong>, Northeastern University
+      <span class="timeline-meta">05/2024 – 06/2026 · Boston, MA</span>
+      {% if include.details %}
+      <span class="timeline-desc">Worked with <a href="https://www.yanzhiwang.com/">Yanzhi Wang</a></span>
+      <span class="timeline-desc">Compressed MoE LLMs (e.g., DeepSeek V3) via pruning and quantization and deployed them on edge devices; built a real-time LLM + TTS conversational system and accelerated digital avatar inference with CoreML and TensorRT.</span>
+      {% endif %}
+    </div>
+  </li>
+  <li>
+    <img class="timeline-logo" src="{{ '/images/logos/embodyx.jpeg' | relative_url }}" alt="EmbodyX logo">
+    <div>
+      <strong>Machine Learning Engineer</strong>, EmbodyX Inc. &amp; AIbao LLC
+      <span class="timeline-meta">05/2024 – 06/2026 · Boston, MA &amp; San Mateo, CA</span>
+      {% if include.details %}
+      <span class="timeline-desc">Worked with <a href="https://www.linkedin.com/in/weiwei-c-01029421">Weiwei Chen</a></span>
+      <span class="timeline-desc">Accelerated and deployed VLA and world action models on robotic arm (UR) and humanoid (Unitree, AGIBOT) platforms.</span>
+      {% endif %}
+    </div>
+  </li>
+  <li>
+    <img class="timeline-logo" src="{{ '/images/logos/cognex.png' | relative_url }}" alt="Cognex logo">
+    <div>
+      <strong>Software Engineering Co-op</strong>, Cognex Corporation
+      <span class="timeline-meta">01/2023 – 08/2023 · Natick, MA</span>
+      {% if include.details %}
+      <span class="timeline-desc">Worked with <a href="https://www.linkedin.com/in/soon-neoh-230a073">Soon Neoh</a></span>
+      <span class="timeline-desc">Ported an Edge Learning tool across VisionPro versions through a .NET wrapper, developed VisionPro C++/C# API and UI features, and expanded C++/C# test coverage in TeamCity CI.</span>
+      {% endif %}
+    </div>
+  </li>
+</ul>
