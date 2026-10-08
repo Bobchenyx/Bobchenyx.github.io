@@ -80,6 +80,8 @@ I received my M.S. from Northeastern University and my B.E. from Beijing Univers
   </span>
 </h2>
 
+<p class="pub-note"><sup>*</sup> Equal contribution &nbsp;&nbsp; <sup>†</sup> Corresponding author</p>
+
 {% assign sorted_pubs = site.publications | sort: 'date' | reverse %}
 {% for post in sorted_pubs %}
 <div class="paper-box">
@@ -151,6 +153,12 @@ h2[id] {
   font-size: 0.85rem;
   color: var(--global-text-color);
   line-height: 1.3;
+}
+.pub-note {
+  margin: -0.6em 0 0.4em;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--global-text-color-light);
 }
 .pub-heading-meta {
   font-size: 0.8rem;

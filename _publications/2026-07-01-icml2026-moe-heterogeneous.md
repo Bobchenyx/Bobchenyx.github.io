@@ -6,7 +6,7 @@ permalink: /publication/2026-07-01-icml2026-moe-heterogeneous
 date: 2026-07-01
 venue: 'ICML 2026'
 status: accepted
-authors: 'Zhendong Mi, <u>Yixiao Chen</u>, Pu Zhao, Xiaodong Yu, Hao Wang, Yanzhi Wang, Shaoyi Huang'
+authors: 'Zhendong Mi, <u>Yixiao Chen</u>, Pu Zhao, Xiaodong Yu, Hao Wang, Yanzhi Wang, Shaoyi Huang<sup>†</sup>'
 paperurl: 'https://arxiv.org/abs/2602.09316'
 teaser: 'papers/rfid-moe.png'
 ---
