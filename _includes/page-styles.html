@@ -159,11 +159,13 @@ ul.timeline li {
 }
 ul.timeline.with-logos li {
   display: flex;
-  align-items: center;
+  /* top-align so the logo sits beside the role line, even when details wrap */
+  align-items: flex-start;
   gap: 0.9rem;
 }
 .timeline-logo {
   flex: 0 0 44px;
+  margin-top: 0.1rem;
   width: 44px;
   height: 44px;
   object-fit: contain;

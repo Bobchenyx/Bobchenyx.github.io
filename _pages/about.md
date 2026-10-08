@@ -8,15 +8,11 @@ redirect_from:
 
 <h2 id="about">About</h2>
 
-I am an Engineer at <span class="nowrap"><img class="inline-logo" src="{{ '/images/logos/motional.jpeg' | relative_url }}" alt="Motional">Motional</span>, contributing to the mission to make driverless vehicles a safe, reliable, and accessible reality.
+I am a Perception Engineer at <span class="nowrap"><img class="inline-logo" src="{{ '/images/logos/motional.jpeg' | relative_url }}" alt="">Motional</span>, contributing to the mission to make driverless vehicles a safe, reliable, and accessible reality.
 
-I was fortunate to work on efficient AI and large model deployment at
-<span class="nowrap"><img class="inline-logo" src="{{ '/images/logos/embodyx.jpeg' | relative_url }}" alt="EmbodyX">EmbodyX</span> and
-<span class="nowrap"><img class="inline-logo" src="{{ '/images/logos/northeastern.jpeg' | relative_url }}" alt="Northeastern">Northeastern</span> University, working with
-[Weiwei Chen](https://www.linkedin.com/in/weiwei-c-01029421) and
-[Yanzhi Wang](https://www.yanzhiwang.com/). Before that, I was a Software
-Engineering Co-op at <span class="nowrap"><img class="inline-logo" src="{{ '/images/logos/cognex.png' | relative_url }}" alt="Cognex">Cognex</span> Corporation, working with
-[Soon Neoh](https://www.linkedin.com/in/soon-neoh-230a073) on VisionPro software.
+Previously, I worked on efficient AI and large model deployment at
+<span class="nowrap"><img class="inline-logo" src="{{ '/images/logos/embodyx.jpeg' | relative_url }}" alt="">EmbodyX</span> and <span class="nowrap"><img class="inline-logo" src="{{ '/images/logos/northeastern.jpeg' | relative_url }}" alt="">Northeastern</span> University,
+and on VisionPro software at <span class="nowrap"><img class="inline-logo" src="{{ '/images/logos/cognex.png' | relative_url }}" alt="">Cognex</span>.
 
 I received my M.S. from Northeastern University and my B.E. from Beijing University of Technology.
 
