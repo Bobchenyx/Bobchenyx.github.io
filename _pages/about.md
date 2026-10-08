@@ -18,7 +18,7 @@ I received my M.S. from Northeastern University and my B.E. from Beijing Univers
 
 <ul class="timeline with-logos">
   <li>
-    <img class="timeline-logo" src="{{ '/images/logos/motional.svg' | relative_url }}" alt="Motional logo">
+    <img class="timeline-logo" src="{{ '/images/logos/motional.jpeg' | relative_url }}" alt="Motional logo">
     <div>
       <strong>Perception Engineer</strong>, Motional
       <span class="timeline-meta">07/2026 – Present</span>
@@ -66,21 +66,12 @@ I received my M.S. from Northeastern University and my B.E. from Beijing Univers
   </li>
 </ul>
 
-<h2 id="research-interests" class="no-underline">Research Interests</h2>
-
-<div class="interest-tags">
-  <span>MoE Efficient Decoding &amp; LLM Compression</span>
-  <span>Edge Computing &amp; On-device AI Inference</span>
-  <span>Computer Vision &amp; Autonomous Driving Perception</span>
-</div>
-
 <h2 id="publications" class="pub-heading">📝 Selected Publications
   <span class="pub-heading-meta">
     | <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener noreferrer">See All Publications &gt;</a>
+    | <span class="pub-legend"><sup>*</sup> Equal contribution &nbsp; <sup>†</sup> Corresponding author</span>
   </span>
 </h2>
-
-<p class="pub-note"><sup>*</sup> Equal contribution &nbsp;&nbsp; <sup>†</sup> Corresponding author</p>
 
 {% assign sorted_pubs = site.publications | sort: 'date' | reverse %}
 {% for post in sorted_pubs %}
@@ -124,9 +115,9 @@ I received my M.S. from Northeastern University and my B.E. from Beijing Univers
 @media (min-width: 80em) {
   #main { max-width: 1380px; }
 }
-h2.no-underline {
-  border-bottom: none;
-  padding-bottom: 0;
+/* shrink the theme's empty right gutter (suffix 2 of 12) so content runs wider */
+@media (min-width: 64em) {
+  .page { padding-right: 2em; }
 }
 /* drop the 2em top margin the theme puts on every heading, for the first one */
 .page__content > h2:first-child {
@@ -139,31 +130,14 @@ html {
 h2[id] {
   scroll-margin-top: 80px;
 }
-.interest-tags {
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-  margin-top: 0.6rem;
-}
-.interest-tags span {
-  background: var(--global-footer-bg-color);
-  border: 1px solid var(--global-border-color);
-  padding: 0.35rem 0.9rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  color: var(--global-text-color);
-  line-height: 1.3;
-}
-.pub-note {
-  margin: -0.6em 0 0.4em;
-  font-size: 0.75rem;
-  font-style: italic;
-  color: var(--global-text-color-light);
-}
 .pub-heading-meta {
   font-size: 0.8rem;
   font-weight: normal;
   color: var(--global-text-color-light);
+}
+.pub-legend {
+  font-size: 0.65rem;
+  font-style: italic;
 }
 .pub-heading-meta a {
   color: var(--global-link-color);
@@ -173,25 +147,25 @@ h2[id] {
   gap: 1rem;
   padding: 0.9rem 0;
   border-bottom: 1px solid var(--global-border-color);
-  align-items: stretch;
+  /* row height = taller of image and text; the shorter one is centered */
+  align-items: center;
 }
 .paper-box:last-child { border-bottom: none; }
+/* fixed width; height follows the image's own aspect ratio */
 .paper-box-image {
   flex: 0 0 260px;
   max-width: 260px;
-  align-self: stretch;
-  position: relative;
   overflow: hidden;
   border: 1px solid var(--global-border-color);
   border-radius: 4px;
-  background: var(--global-footer-bg-color);
+  background: #fff;
+}
+@media (min-width: 80em) {
+  .paper-box-image { flex-basis: 320px; max-width: 320px; }
 }
 .paper-box-image img {
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
   display: block;
 }
 .paper-box-text { flex: 1; min-width: 0; }
@@ -251,13 +225,11 @@ h2[id] {
   text-decoration: none;
 }
 @media (max-width: 600px) {
-  .paper-box { flex-direction: column; }
+  .paper-box { flex-direction: column; align-items: stretch; }
   .paper-box-image {
     flex: unset;
     width: 100%;
-    max-width: 280px;
-    aspect-ratio: 16 / 9;
-    margin: 0 auto;
+    max-width: 100%;
   }
 }
 ul.timeline {
