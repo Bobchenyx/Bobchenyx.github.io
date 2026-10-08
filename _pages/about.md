@@ -8,9 +8,15 @@ redirect_from:
 
 <h2 id="about">About</h2>
 
-I am an Engineer at Motional, contributing to the mission to make driverless vehicles a safe, reliable, and accessible reality.
+I am an Engineer at <span class="nowrap"><img class="inline-logo" src="{{ '/images/logos/motional.jpeg' | relative_url }}" alt="Motional">Motional</span>, contributing to the mission to make driverless vehicles a safe, reliable, and accessible reality.
 
-Previously, I worked on efficient AI and large model deployment at EmbodyX and Northeastern University. Before that, I was a Software Engineering Co-op at Cognex Corporation, where I contributed to VisionPro software.
+I was fortunate to work on efficient AI and large model deployment at
+<span class="nowrap"><img class="inline-logo" src="{{ '/images/logos/embodyx.jpeg' | relative_url }}" alt="EmbodyX">EmbodyX</span> and
+<span class="nowrap"><img class="inline-logo" src="{{ '/images/logos/northeastern.jpeg' | relative_url }}" alt="Northeastern">Northeastern</span> University, working with
+[Weiwei Chen](https://www.linkedin.com/in/weiwei-c-01029421) and
+[Yanzhi Wang](https://www.yanzhiwang.com/). Before that, I was a Software
+Engineering Co-op at <span class="nowrap"><img class="inline-logo" src="{{ '/images/logos/cognex.png' | relative_url }}" alt="Cognex">Cognex</span> Corporation, working with
+[Soon Neoh](https://www.linkedin.com/in/soon-neoh-230a073) on VisionPro software.
 
 I received my M.S. from Northeastern University and my B.E. from Beijing University of Technology.
 
@@ -134,6 +140,18 @@ h2[id] {
   font-size: 0.8rem;
   font-weight: normal;
   color: var(--global-text-color-light);
+}
+.nowrap { white-space: nowrap; }
+/* small logo inline before an organization name in running text */
+img.inline-logo {
+  display: inline;
+  height: 1.15em;
+  width: auto;
+  max-width: 2.6em;
+  object-fit: contain;
+  vertical-align: -0.2em;
+  margin-right: 0.28em;
+  border-radius: 2px;
 }
 .pub-legend {
   font-size: 0.65rem;
