@@ -94,6 +94,9 @@ I received my M.S. from Northeastern University and my B.E. from Beijing Univers
     {% if post.authors and post.authors != '' %}
     <p class="paper-authors">{{ post.authors }}</p>
     {% endif %}
+    {% if post.award and post.award != '' %}
+    <p class="paper-award">{{ post.award }}</p>
+    {% endif %}
     {% if post.description and post.description != '' %}
     <p class="paper-desc">{{ post.description }}</p>
     {% endif %}
@@ -205,6 +208,12 @@ img.inline-logo {
   text-decoration: none;
 }
 .paper-authors b { color: var(--global-text-color); font-weight: 600; }
+.paper-box .paper-award {
+  font-size: 0.87rem !important;
+  font-weight: 700;
+  color: #d32f2f;
+  line-height: 1.5;
+}
 .paper-desc {
   font-size: 0.87rem;
   color: var(--global-text-color-light);
