@@ -324,3 +324,30 @@
     }
   }
 }
+
+/* Sidebar link icons: center every glyph in the same fixed box so icons of
+   different widths (pin, building, Google G, emoji) line up in one column.
+   The theme's .icon-pad-right puts 0.5em padding inside the 1.25em fa-fw box,
+   which left wide glyphs overflowing to the right of narrow ones. */
+.author__urls .icon-pad-right {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.25em;
+  padding-right: 0;
+  margin-right: 0.5em;
+  vertical-align: -0.13em;
+  line-height: 1;
+
+  svg { display: block; }
+}
+
+/* font-icon and emoji glyphs sit ~0.125em low in their em box (the SVG G does
+   not), so lift them to share the text's vertical center */
+.author__urls i.icon-pad-right,
+.author__urls .author__emoji {
+  position: relative;
+  top: -0.125em;
+}
+/* the hugging-face emoji's ink is drawn left of its advance box */
+.author__urls .author__emoji { left: 0.11em; }
